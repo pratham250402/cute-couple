@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Anniversary Deshna & Dhruv 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#1a0818;--wine:#4a0f33;--rose:#ff5d8f;--gold:#f6c177;--blush:#ffd9e4;--ink:#fff4f7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:radial-gradient(ellipse at top,#5a1240 0%,var(--plum) 60%) fixed;overflow-x:hidden;line-height:1.6}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* Curtain gate */
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px}
+.curtain{position:absolute;top:0;bottom:0;width:50.5%;background:repeating-linear-gradient(90deg,#7a0f2e 0 26px,#9c1a3f 26px 52px,#5e0a23 52px 70px);box-shadow:inset 0 -80px 120px rgba(0,0,0,.5);transition:transform 1.8s cubic-bezier(.7,0,.2,1)}
+.curtain.l{left:0;transform-origin:left}.curtain.r{right:0}
+#gate.open .l{transform:translateX(-102%)}#gate.open .r{transform:translateX(102%)}
+#gate.open .gate-in{opacity:0;transform:scale(.9)}
+.gate-in{position:relative;z-index:2;transition:.6s}
+.gate-in h1{font-size:clamp(2.4rem,9vw,4.5rem);color:var(--gold);text-shadow:0 0 30px rgba(246,193,119,.6)}
+.gate-in p{margin:8px 0 26px;color:var(--blush)}
+.btn{border:0;cursor:pointer;font:600 1rem 'Poppins';padding:15px 34px;border-radius:50px;color:#3a0b24;background:linear-gradient(135deg,var(--gold),#ffe2b0);box-shadow:0 0 0 0 rgba(246,193,119,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(246,193,119,0)}100%{box-shadow:0 0 0 0 rgba(246,193,119,0)}}
+#gate.gone{display:none}
+
+/* Hero */
+section{padding:80px 20px;max-width:1000px;margin:auto;text-align:center;position:relative;z-index:2}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero .small{color:var(--blush);letter-spacing:.08em}
+.names{font-size:clamp(3.4rem,15vw,8rem);line-height:1.05;margin:10px 0;background:linear-gradient(90deg,var(--gold),var(--rose),var(--gold));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.amp{display:block;font-size:.45em;color:var(--rose);-webkit-text-fill-color:var(--rose)}
+.heart-beat{font-size:3rem;animation:beat 1.1s infinite;display:inline-block;margin-top:10px}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.3)}30%{transform:scale(1)}45%{transform:scale(1.2)}}
+.hint{margin-top:30px;color:var(--blush);opacity:.7;font-size:.85rem;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+
+h2{font-size:clamp(2.2rem,7vw,3.6rem);color:var(--gold);margin-bottom:12px}
+.lead{max-width:560px;margin:0 auto 34px;color:var(--blush);font-weight:300}
+
+/* Photo frames */
+.frame{position:relative;margin:0 auto;max-width:520px;aspect-ratio:4/5;border-radius:240px 240px 24px 24px;padding:10px;background:linear-gradient(135deg,var(--gold),var(--rose),var(--gold));box-shadow:0 20px 60px rgba(255,93,143,.35)}
+.frame.wide{max-width:760px;aspect-ratio:16/10;border-radius:28px}
+.frame .ph{width:100%;height:100%;border-radius:inherit;overflow:hidden;background:var(--wine);display:flex;align-items:center;justify-content:center;flex-direction:column;cursor:pointer;color:var(--blush);font-size:.9rem;padding:20px}
+.frame img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.ph b{font-size:2.6rem}
+.cap{margin-top:16px;color:var(--blush);font-style:italic}
+
+/* Timeline */
+.tl{position:relative;max-width:640px;margin:40px auto 0;text-align:left;padding-left:34px}
+.tl:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--rose),var(--gold))}
+.tl div{position:relative;margin-bottom:30px;background:rgba(255,255,255,.06);padding:16px 20px;border-radius:16px;border:1px solid rgba(255,217,228,.15)}
+.tl div:before{content:"♥";position:absolute;left:-34px;top:14px;color:var(--rose);font-size:1.1rem;background:var(--plum);border-radius:50%;width:18px;text-align:center;line-height:18px}
+.tl h3{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.5rem}
+.tl p{font-weight:300;font-size:.95rem}
+
+/* Talents */
+.talents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+.card{padding:28px 22px;border-radius:22px;background:linear-gradient(160deg,rgba(255,93,143,.18),rgba(246,193,119,.1));border:1px solid rgba(255,217,228,.2)}
+.card .em{font-size:2.6rem}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold)}
+.card p{font-weight:300;font-size:.95rem}
+
+/* Drum + cricket stage */
+.stage{margin-top:30px;padding:30px 16px;border-radius:26px;background:rgba(0,0,0,.28);border:1px dashed rgba(246,193,119,.5)}
+.drum{width:min(220px,60vw);aspect-ratio:1;margin:10px auto;border-radius:50%;border:8px solid var(--gold);background:radial-gradient(circle,#ffe9ef,#ff8fb2 70%,#c7336a);box-shadow:0 0 40px rgba(255,93,143,.6),inset 0 0 30px rgba(0,0,0,.3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:3.4rem;user-select:none;transition:transform .08s}
+.drum.hit{transform:scale(.93)}
+.row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn2{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:12px 24px;border-radius:40px;font:600 .95rem 'Poppins';cursor:pointer}
+.btn2:hover{background:var(--gold);color:#3a0b24}
+#msg{min-height:1.6em;margin-top:14px;color:var(--blush)}
+
+/* Wishes */
+.wish{max-width:620px;margin:0 auto;font-size:1.25rem;font-family:'Cormorant Garamond',serif;font-style:italic}
+.wish p{margin-bottom:16px}
+.team{margin-top:30px;font-size:clamp(2.4rem,9vw,4rem);color:var(--rose)}
+footer{padding:50px 20px 70px;text-align:center;color:var(--blush);position:relative;z-index:2;font-size:.9rem}
+
+.rv{opacity:0;transform:translateY(30px);transition:1s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<div id="gate">
+  <div class="curtain l"></div><div class="curtain r"></div>
+  <div class="gate-in">
+    <h1 class="script">A surprise for you...</h1>
+    <p>Deshna Didi &amp; Dhruv Bhai, this one is from Team Aavkar 💌</p>
+    <button class="btn" id="openBtn">Open the curtain ✨</button>
+  </div>
+</div>
+
+<main>
+<section class="hero">
+  <p class="small">Happy Anniversary</p>
+  <h1 class="names script">Deshna<span class="amp">&amp;</span>Dhruv</h1>
+  <div class="heart-beat">❤️</div>
+  <p class="lead" style="margin-top:14px">From 8th standard to forever. A love story our whole team adores.</p>
+  <p class="hint">scroll down, more surprises ↓</p>
+</section>
+
+<section class="rv">
+  <h2 class="script">The most beautiful couple</h2>
+  <p class="lead">Tap the frame to add your photo (or save it as <b>couple.jpg</b> next to this file).</p>
+  <div class="frame"><label class="ph" id="ph1"><b>📸</b>Deshna Didi &amp; Dhruv Bhai<input type="file" accept="image/*" hidden data-img="couple.jpg"></label></div>
+  <p class="cap">Two hearts, one beautiful journey 💞</p>
+</section>
+
+<section class="rv">
+  <h2 class="script">Our favourite love story</h2>
+  <div class="tl">
+    <div><h3>8th Standard</h3><p>Two classmates, one little spark. Nobody knew it would become a lifetime story.</p></div>
+    <div><h3>Growing up together</h3><p>Exams, dreams, struggles, laughs. Through everything, they stayed each other's person.</p></div>
+    <div><h3>Today</h3><p>Still smiling at each other like it's day one. Years later, the love only got stronger.</p></div>
+  </div>
+</section>
+
+<section class="rv">
+  <h2 class="script">Two stars, one stage</h2>
+  <div class="talents">
+    <div class="card"><div class="em">🏏</div><h3>Dhruv Bhai</h3><p>A champion on the cricket pitch and the heart of every evening with his drum sticks. Where he plays, the rhythm follows.</p></div>
+    <div class="card"><div class="em">🎤</div><h3>Deshna Didi</h3><p>A beautiful singer and a graceful choreographer. Her voice and her moves make every moment magical.</p></div>
+  </div>
+  <div class="stage">
+    <h3 class="serif" style="font-size:1.8rem;color:var(--gold)">Play something for them 🥁</h3>
+    <p style="font-weight:300;margin-bottom:6px">Tap the drum, then hit a six!</p>
+    <div class="drum" id="drum" role="button" aria-label="Play drum">🥁</div>
+    <div class="row">
+      <button class="btn2" id="sixBtn">🏏 Hit a SIX!</button>
+      <button class="btn2" id="danceBtn">💃 Sing &amp; dance</button>
+    </div>
+    <div id="msg"></div>
+  </div>
+</section>
+
+<section class="rv">
+  <h2 class="script">Team Aavkar with you</h2>
+  <p class="lead">Tap the frame to add our group photo (or save it as <b>team.jpg</b>).</p>
+  <div class="frame wide"><label class="ph"><b>👨‍👩‍👧‍👦</b>Team Aavkar group photo<input type="file" accept="image/*" hidden data-img="team.jpg"></label></div>
+  <p class="cap">We are lucky to have you both ❤️</p>
+</section>
+
+<section class="rv">
+  <h2 class="script">Our wish for you</h2>
+  <div class="wish">
+    <p>May your love keep the rhythm of Dhruv bhai's drums: strong, joyful and never missing a beat.</p>
+    <p>May it have the melody of Deshna didi's songs: sweet, warm and always in tune.</p>
+    <p>May every year ahead be a six over the boundary and a dance full of happiness.</p>
+    <p>Happy Anniversary to our beautiful couple. Stay together, stay blessed, stay smiling. 💖</p>
+  </div>
+  <div class="team script">With love, Team Aavkar</div>
+  <div style="margin-top:28px"><button class="btn" id="finale">Celebrate again 🎉</button></div>
+</section>
+</main>
+<footer>Made with ❤️ for Deshna &amp; Dhruv</footer>
+
+<script>
+const cv=document.getElementById('fx'),cx=cv.getContext('2d');
+let W,H,parts=[];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener('resize',rs);
+const EM=['❤️','💖','💕','✨','🎶','🌹'];
+function heart(x,y,v){parts.push({t:'e',x,y,vx:(Math.random()-.5)*v,vy:-Math.random()*v-1,g:.05,s:16+Math.random()*20,e:EM[Math.random()*EM.length|0],l:120})}
+function confetti(n){for(let i=0;i<n;i++)parts.push({t:'c',x:W/2,y:H*.4,vx:(Math.random()-.5)*16,vy:-Math.random()*14-2,g:.25,s:6+Math.random()*6,c:`hsl(${Math.random()*60+330},90%,${60+Math.random()*20}%)`,l:160})}
+function rain(){heart(Math.random()*W,H+10,2);parts[parts.length-1].vy=-1-Math.random()*1.5;parts[parts.length-1].g=0;parts[parts.length-1].l=400}
+function loop(){cx.clearRect(0,0,W,H);
+ parts=parts.filter(p=>p.l>0);
+ for(const p of parts){p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.l--;cx.globalAlpha=Math.min(1,p.l/40);
+  if(p.t==='e'){cx.font=p.s+'px serif';cx.fillText(p.e,p.x,p.y)}else{cx.fillStyle=p.c;cx.fillRect(p.x,p.y,p.s,p.s*.5)}}
+ cx.globalAlpha=1;requestAnimationFrame(loop)}
+loop();
+setInterval(()=>{if(!document.hidden&&parts.length<60)rain()},500);
+
+// audio
+let ac;function A(){return ac||(ac=new (window.AudioContext||window.webkitAudioContext)())}
+function kick(){const a=A(),o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(160,a.currentTime);o.frequency.exponentialRampToValueAtTime(40,a.currentTime+.18);g.gain.setValueAtTime(1,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+.25);o.connect(g).connect(a.destination);o.start();o.stop(a.currentTime+.26)}
+function snare(){const a=A(),n=a.createBufferSource(),b=a.createBuffer(1,a.sampleRate*.15,a.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);n.buffer=b;const g=a.createGain();g.gain.value=.6;n.connect(g).connect(a.destination);n.start()}
+function chime(notes){const a=A();notes.forEach((f,i)=>{const o=a.createOscillator(),g=a.createGain();o.type='sine';o.frequency.value=f;const t=a.currentTime+i*.22;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.3,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+.7);o.connect(g).connect(a.destination);o.start(t);o.stop(t+.75)})}
+
+// open curtain
+document.getElementById('openBtn').onclick=()=>{
+ const g=document.getElementById('gate');g.classList.add('open');
+ try{chime([523,659,784,1047,784,1047,1319])}catch(e){}
+ setTimeout(()=>confetti(160),600);setTimeout(()=>confetti(120),1500);
+ setTimeout(()=>g.classList.add('gone'),2200)};
+
+// drum
+let k=0;const drum=document.getElementById('drum'),msg=document.getElementById('msg');
+const lines=['Dhruv bhai on the drums! 🥁','What a beat! 🔥','Deshna didi, your turn to sing! 🎤','Rhythm of love 💖','Encore, encore! 👏'];
+drum.onclick=e=>{k++;try{k%2?kick():snare()}catch(x){}
+ drum.classList.add('hit');setTimeout(()=>drum.classList.remove('hit'),90);
+ const r=drum.getBoundingClientRect();for(let i=0;i<4;i++)heart(r.left+r.width/2,r.top+r.height/2,8);
+ msg.textContent=lines[k%lines.length];if(k%8===0)confetti(60)};
+
+// cricket six
+document.getElementById('sixBtn').onclick=()=>{
+ const b=document.createElement('div');b.textContent='🏏';b.style.cssText='position:fixed;left:-60px;bottom:30%;font-size:60px;z-index:60;transition:all 1.4s cubic-bezier(.2,.7,.3,1)';
+ document.body.appendChild(b);requestAnimationFrame(()=>{b.style.left='110vw';b.style.bottom='85%';b.style.transform='rotate(900deg)';b.textContent='🏏'});
+ try{snare()}catch(e){}
+ setTimeout(()=>{b.remove();confetti(140);msg.textContent='SIX! Happy Anniversary Dhruv bhai & Deshna didi! 🏏💖'},700)};
+
+// sing & dance
+document.getElementById('danceBtn').onclick=()=>{
+ try{chime([659,784,880,784,659,587,659,784,1047])}catch(e){}
+ let n=0;const iv=setInterval(()=>{heart(Math.random()*W,H*.8,10);if(++n>40)clearInterval(iv)},80);
+ msg.textContent='🎶 La la la... Deshna didi, the stage is yours! 💃';
+ document.body.animate([{transform:'rotate(0)'},{transform:'rotate(.6deg)'},{transform:'rotate(-.6deg)'},{transform:'rotate(0)'}],{duration:400,iterations:4})};
+
+document.getElementById('finale').onclick=()=>{try{chime([523,659,784,1047])}catch(e){}confetti(200);setTimeout(()=>confetti(150),500)};
+
+// photos: try file next to page first, else pick from device
+document.querySelectorAll('input[data-img]').forEach(inp=>{
+ const ph=inp.parentElement,src=inp.dataset.img,t=new Image();
+ const show=u=>{const i=document.createElement('img');i.src=u;ph.replaceWith(i)};
+ t.onload=()=>show(src);t.src=src;
+ inp.onchange=()=>{const f=inp.files[0];if(f)show(URL.createObjectURL(f))}});
+
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.querySelector('.frame'))confetti(40)}}),{threshold:.2});
+document.querySelectorAll('.rv').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
